@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Phyton</title>
+	<style type="text/css">
+		#navegador ul{
+		   list-style-type: none;
+		   text-align: center;
+		}
+
+		#navegador li{
+		   display: inline;
+		   text-align: center;
+		   margin: 0 10px 0 0;
+		}
+
+		#navegador li a {
+		   padding: 2px 7px 2px 7px;
+		   color: #666;
+		   background-color: #eeeeee;
+		   border: 1px solid #ccc;
+		   text-decoration: none;
+		}
+
+		#navegador li a:hover{
+		   background-color: #333333;
+		   color: #ffffff;
+		}
+	</style>
+</head>
+<body>
+
+	
+	<div id="navegador">
+	<ul>
+		<li><a href="/">Listado</a></li>
+		<li><a href="#">Registrar</a></li>
+	</ul>
+	</div>
+
+	<br>
+	<br>
+	
+	<form action="" method="post">
+	 {% csrf_token %}	
+		<div align="center" >
+			Ingresar Nombre de Pelicula
+			<input type="text" name="nombre">
+
+			<br>
+			<br>
+
+			Ingresar Genero
+			<input type="text" name="genero">
+
+			<br>
+			<br>
+
+			Ingrese Año
+			<input type="text" name="ano">
+
+			<br>
+			<br>
+
+			<input type="submit" values="Enviar">
+		</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabla</title>
+	<style type="text/css">
+		#navegador ul{
+		   list-style-type: none;
+		   text-align: center;
+		}
+
+		#navegador li{
+		   display: inline;
+		   text-align: center;
+		   margin: 0 10px 0 0;
+		}
+
+		#navegador li a {
+		   padding: 2px 7px 2px 7px;
+		   color: #666;
+		   background-color: #eeeeee;
+		   border: 1px solid #ccc;
+		   text-decoration: none;
+		}
+
+		#navegador li a:hover{
+		   background-color: #333333;
+		   color: #ffffff;
+		}
+		table, th, td {
+		    border: 1px solid black;
+		    border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+ 	
+ 	<div id="navegador">
+	<ul>
+		<li><a href="#">Listado</a></li>
+		<li><a href="/registrar">Registrar</a></li>
+	</ul>
+	</div>
+
+	<h1 align="center">Pelicula</h1>
+
+	<table style="width:60%" align="center">
+	  <tr>
+	    <td>Nombre</td>
+	    <td>Genero</td>		
+	    <td>Año</td>
+	  </tr>
+	  {% for p in listado %}
+	  <tr>
+	    <td> {{ p.nombre }} </td>
+	    <td> {{ p.genero }} </td>		
+	    <td> {{ p.año }} </td>
+	  </tr>
+	  {% endfor %}
+	 
+	</table>
+ 
+</body>
+ 
+</html>
