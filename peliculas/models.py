@@ -4,7 +4,7 @@ from mongoengine import *
 class Peliculas(Document):
     nombre = StringField(max_length=200)
     genero = StringField(max_length=200)
-    año = StringField(max_length=200)
+    ano = StringField(max_length=200)
     
 
 # from yourproject.models import Poll, Choice

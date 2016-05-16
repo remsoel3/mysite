@@ -16,7 +16,7 @@ def listado(request):
 
 def registrar(request):
 	if request.method == 'POST':
-		pelicula = Peliculas(nombre=request.POST['nombre'], genero=request.POST['genero'], año=request.POST['ano'])
+		pelicula = Peliculas(nombre=request.POST['nombre'], genero=request.POST['genero'], ano=request.POST['ano'])
 		pelicula.save()
 		return HttpResponseRedirect('/')
 
